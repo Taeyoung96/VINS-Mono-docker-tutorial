@@ -2,7 +2,7 @@
 
 There is a dockerfile on the original repository, but the explanation is unfriendly for beginners.  
 
-I make my own toturial video, just follow it line by line.  
+I make my own tutorial video, just follow it line by line.  
 
 ## Requirements  
 - [docker](https://www.docker.com/)
