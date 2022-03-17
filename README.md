@@ -16,6 +16,7 @@ I make my own tutorial video, just follow it line by line.
 > If you want to use this dataset, you need to fix some bag files.  
 > Please refer to [this issue](https://github.com/lifelong-robotic-vision/OpenLORIS-Scene/issues/15).  
 
+When you make dataset, you have to know where it is (Absolute path will be used).  
 
 ```
 @inproceedings{shi2019openlorisscene,
