@@ -2,7 +2,7 @@
 
 There is a dockerfile on the original repository, but the explanation is unfriendly for beginners.  
 
-I use another docker image, and I make my own tutorial video, just follow it.  
+I use another docker image, and dataset.  
 
 ## Requirements  
 - [docker](https://www.docker.com/)
