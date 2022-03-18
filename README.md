@@ -139,3 +139,13 @@ This bag file was created by myself using the OpenLORIS-Scene dataset.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/41863759/158924202-3696a69c-bffe-44ee-86fd-e8f532f9b0bb.JPG" width = "600" ></p>  
 
+## License  
+
+Same License with original VINS-MONO.  
+
+The source code is released under [GPLv3](http://www.gnu.org/licenses/) license.
+
+We are still working on improving the code reliability. For any technical issues, please contact Tong QIN <tong.qinATconnect.ust.hk> or Peiliang LI <pliapATconnect.ust.hk>.
+
+For commercial inquiries, please contact Shaojie SHEN <eeshaojieATust.hk>
+
