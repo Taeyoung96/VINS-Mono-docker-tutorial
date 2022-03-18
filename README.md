@@ -100,6 +100,12 @@ When you are done you would see the outputs below.
 ...
 ```
 
+Then run roscore.  
+
+```
+jovyan@e9663ba248d6:~/catkin_ws$ roscore  
+```
+
 Now you need to connect to the Docker container using the other 3 terminals.  
 
 - 2nd Terminal : launch vins_estimator     
@@ -122,6 +128,7 @@ docker exec -it -w /home/jovyan/catkin_ws/ vins-mono /bin/bash
 ```
 When connecting to a docker container,  
 ```
+xhost +local:docker
 roslaunch vins_estimator vins_rviz.launch
 ```
 
