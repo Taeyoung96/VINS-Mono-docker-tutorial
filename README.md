@@ -16,7 +16,7 @@ I use another docker image, and I make my own tutorial video, just follow it.
 > If you want to use this dataset, you need to fix some bag files.  
 > Please refer to [this issue](https://github.com/lifelong-robotic-vision/OpenLORIS-Scene/issues/15).  
 
-When you make dataset, you have to know where it is (Absolute path will be used).  
+**When you make dataset, you have to know where it is (Absolute path will be used).**  
 
 ```
 @inproceedings{shi2019openlorisscene,
@@ -34,3 +34,72 @@ You could use original [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS
 but I make my own [VINS-Mono-TUM-format](https://github.com/Taeyoung96/VINS-Mono-TUM-format).  
 
 I added config file for OpenLORIS-Scene dataset, and change the file format of `vins_result_loop.csv` like **[TUM RGB-D dataset](https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats)**. 
+
+
+```
+git clone https://github.com/Taeyoung96/VINS-Mono-TUM-format.git
+```
+**Also, you should know where it is (Absolute path will be used).**  
+
+## Pull the docker image  
+
+I used [icra2018/vins-mono](https://hub.docker.com/r/icra2018/vins-mono) docker image.  
+
+```
+docker pull icra2018/vins-mono
+```
+
+When the Docker image pull is completed, the output is as follows when input as shown below.  
+
+```
+docker images
+```
+Output:
+```
+REPOSITORY           TAG                    IMAGE ID       CREATED        SIZE
+icra2018/vins-mono   latest                 1dc54987f8fe   2 years ago    4.95GB
+```
+
+## Make your own container  
+
+You have to use your own absolute path, when you run the command below.  
+
+```
+nvidia-docker run -it -p 8888:8888 -e DISPLAY -w /home/jovyan/catkin_ws/src -v /tmp/.X11-unix:/tmp/.X11-unix \
+-v [Absolute path of Dataset]:/dataset \
+-v [Absolute path of VINS-Mono repository]:/home/jovyan/catkin_ws/src/ \
+--name vins-mono icra2018/vins-mono:latest /bin/bash
+```
+
+When you are done, the terminal will be changed like below.  
+
+```
+jovyan@e9663ba248d6:~/catkin_ws/src$ 
+```
+Type ls and you should see the VINS-Mono folder.  
+```
+jovyan@e9663ba248d6:~/catkin_ws/src$ ls
+VINS-Mono
+```
+
+Change the directory and build it.  
+```
+jovyan@e9663ba248d6:~/catkin_ws/src$ cd ..
+jovyan@e9663ba248d6:~/catkin_ws$ catkin_make 
+```
+
+When you are done you would see the outputs below.  
+```
+[  3%] Built target benchmark_publisher
+[ 23%] Built target camera_model
+[ 44%] Built target Calibration
+[ 47%] Built target ar_demo_node
+[ 53%] Built target feature_tracker
+[ 78%] Built target vins_estimator
+[100%] Built target pose_graph
+...
+```
+
+Now you need to connect to the Docker container using the other 3 terminals.  
+
+
