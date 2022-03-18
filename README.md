@@ -1,4 +1,4 @@
-# VINS-ono-docker-tutorial
+# VINS-Mono-docker-tutorial
 
 There is a dockerfile on the original repository, but the explanation is unfriendly for beginners.  
 
