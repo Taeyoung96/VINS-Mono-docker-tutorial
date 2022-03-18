@@ -102,4 +102,40 @@ When you are done you would see the outputs below.
 
 Now you need to connect to the Docker container using the other 3 terminals.  
 
+- 2nd Terminal : launch vins_estimator     
+- 3rd Terminal : launch Rviz  
+- 4nd Terminal : play rosbag file  
+
+2nd Terminal :  
+```
+docker exec -it -w /home/jovyan/catkin_ws/ vins-mono /bin/bash
+```
+When connecting to a docker container,  
+The launch file is in [VINS-Mono-TUM-format](https://github.com/Taeyoung96/VINS-Mono-TUM-format).  
+```
+roslaunch vins_estimator realsense_color_cafe.launch
+```
+
+3rd Terminal :  
+```
+docker exec -it -w /home/jovyan/catkin_ws/ vins-mono /bin/bash
+```
+When connecting to a docker container,  
+```
+roslaunch vins_estimator vins_rviz.launch
+```
+
+4nd Terminal :   
+```
+docker exec -it -w /dataset vins-mono /bin/bash  
+```
+When connecting to a docker container,  
+```
+rosbag play cafe1-1_with_imu.bag
+```
+This bag file was created by myself using the OpenLORIS-Scene dataset.  
+
+## Result  
+
+
 
