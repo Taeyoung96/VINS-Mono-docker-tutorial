@@ -31,7 +31,7 @@ I use another docker image, and dataset.
 ## Clone VINS-Mono repository  
 
 You could use original [VINS-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono) repository,  
-but I make my own [VINS-Mono-TUM-format](https://github.com/Taeyoung96/VINS-Mono-TUM-format).  
+but I make my own [VINS-MONO-studying](https://github.com/Taeyoung96/VINS-MONO-studying).  
 
 I added config file for OpenLORIS-Scene dataset, and change the file format of `vins_result_loop.csv` like **[TUM RGB-D dataset](https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats)**. 
 
