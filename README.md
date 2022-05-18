@@ -37,7 +37,7 @@ I added config file for OpenLORIS-Scene dataset, and change the file format of `
 
 
 ```
-git clone https://github.com/Taeyoung96/VINS-Mono-TUM-format.git
+git clone https://github.com/Taeyoung96/VINS-MONO-studying.git  
 ```
 **Also, you should know where it is (Absolute path will be used).**  
 
