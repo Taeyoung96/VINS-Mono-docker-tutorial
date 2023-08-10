@@ -1,8 +1,10 @@
 # VINS-Mono-docker-tutorial
 
-There is a dockerfile on the original repository, but the explanation is unfriendly for beginners.  
+There is a dockerfile on the [original repository](https://github.com/HKUST-Aerial-Robotics/VINS-Mono), but the explanation is unfriendly for beginners.  
 
-I use another docker image, and dataset.  
+I use another docker image and dataset.  
+
+I've also uploaded a step-by-step tutorial on [YouTube](https://youtu.be/DzbHQzd45TU).  
 
 ## Requirements  
 - [docker](https://www.docker.com/)
@@ -112,12 +114,17 @@ Now you need to connect to the Docker container using the other 3 terminals.
 - 3rd Terminal : launch Rviz  
 - 4nd Terminal : play rosbag file  
 
+Before connecting other terminals to the container, type the command below to use the GUI.
+```
+xhost +local:docker
+```
+
 2nd Terminal :  
 ```
 docker exec -it -w /home/jovyan/catkin_ws/ vins-mono /bin/bash
 ```
 When connecting to a docker container,  
-The launch file is in [VINS-Mono-TUM-format](https://github.com/Taeyoung96/VINS-Mono-TUM-format).  
+The launch file is in [VINS-MONO-studying](https://github.com/Taeyoung96/VINS-MONO-studying).  
 ```
 roslaunch vins_estimator realsense_color_cafe.launch
 ```
@@ -128,7 +135,6 @@ docker exec -it -w /home/jovyan/catkin_ws/ vins-mono /bin/bash
 ```
 When connecting to a docker container,  
 ```
-xhost +local:docker
 roslaunch vins_estimator vins_rviz.launch
 ```
 
